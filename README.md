@@ -4,7 +4,7 @@
 ![License](https://img.shields.io/badge/license-MIT-green.svg)
 
 **this repo is still under maintenance. so some of the outputs can be wrong because there are still adjustments to be made**
-**you can reach out to the other repo for correct but yet a bit messy code**
+**you can reach out to the other repo for correct but yet a bit messy code** : [original code](https://github.com/starckyang/financial_computation_arc/tree/main)
 
 A Python-based **quantitative finance** toolkit that implements various **option pricing models** using both **analytical** and **numerical** methods.  
 Designed for both **academic research** and **practical trading strategy development**.
