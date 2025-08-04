@@ -8,6 +8,12 @@ Designed for both **academic research** and **practical trading strategy develop
 
 ---
 
+## ⚠️ Current Shortfalls
+
+- The rainbow option pricing still requires improvement,  for its calculation process seems to shrink the variance of the simulations
+
+---
+
 ## 📌 Features
 
 - **Black-Scholes Model** (Analytical solution for European options)
