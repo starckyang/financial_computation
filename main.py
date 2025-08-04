@@ -67,12 +67,6 @@ table.add_row(["Binomial Tree (CRR EU)", bt_results["CRR_Call_EU"], bt_results["
 # Binomial Tree - CRR American
 table.add_row(["Binomial Tree (CRR AM)", bt_results["CRR_Call_AM"], bt_results["CRR_Put_AM"]])
 
-# Binomial Tree - One Column EU
-table.add_row(["Binomial Tree (OC EU)", bt_results["OC_Call_EU"], bt_results["OC_Put_EU"]])
-
-# Binomial Tree - One Column AM
-table.add_row(["Binomial Tree (OC AM)", bt_results["OC_Call_AM"], bt_results["OC_Put_AM"]])
-
 # Binomial Tree - Combinatorial
 table.add_row(["Binomial Tree (Comb)", bt_results["Comb_Call"], bt_results["Comb_Put"]])
 

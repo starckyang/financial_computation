@@ -7,7 +7,7 @@ from utils.option_math import bs_call, bs_put
 from utils.monte_carlo import mc_confidence_interval
 import numpy as np
 
-def black_scholes_main(S0, K, T, sigma, r, q, N_SIM=100000, B=10):
+def black_scholes_main(S0, K, r, q, sigma, T, N_SIM=100000, B=10):
     # Closed-form BS prices
     bs_call_price = bs_call(S0, K, r, q, sigma, T)
     bs_put_price = bs_put(S0, K, r, q, sigma, T)

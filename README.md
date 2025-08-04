@@ -14,7 +14,7 @@ Designed for both **academic research** and **practical trading strategy develop
 ## 📌 Features
 
 - **Black-Scholes Model** (Analytical solution for European options)
-- **Binomial Tree Model** (CRR, American, One-column, Combinatorial)
+- **Binomial Tree Model** (CRR, American, Combinatorial)
 - **Asian Option Pricing** (Monte Carlo simulation)
 - **Lookback Option Pricing** (Monte Carlo simulation)
 - **Rainbow Option Pricing** (Monte Carlo simulation with Cholesky decomposition)
@@ -84,8 +84,6 @@ B = 5         # Monte Carlo batches
 |   Black-Scholes      |   10.4506   |  5.5735   |
 | Binomial Tree (CRR EU)|  10.4468   |  5.5782   |
 | Binomial Tree (CRR AM)|  10.4468   |  5.5782   |
-| Binomial Tree (OC EU) |  10.4468   |  5.5782   |
-| Binomial Tree (OC AM) |  10.4468   |  5.5782   |
 | Binomial Tree (Comb)  |  10.4468   |  5.5782   |
 | Asian Option (MC)     |   7.2314   |  2.9387   |
 | Lookback Option (MC)  |  12.8745   |  3.9452   |
