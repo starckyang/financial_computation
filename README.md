@@ -25,7 +25,7 @@ Designed for both **academic research** and **practical trading strategy develop
 
 ## 📂 File Structure
 
-quant-option-toolkit/
+```bash
 │
 ├── main.py # Main script to run all models and compare results
 │
@@ -45,6 +45,7 @@ quant-option-toolkit/
 └── README.md
 
 ---
+```
 
 ## 🔧 Installation
 
