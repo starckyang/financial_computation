@@ -16,7 +16,7 @@ from models.rainbow_option import rainbow_option_main
 S0 = 100      # Spot price
 K = 100       # Strike price
 T = 1         # Time to maturity (in years)
-sigma = 0.2   # Volatility
+sigma = 0.2 ** (1/2)   # Volatility
 r = 0.05      # Risk-free rate
 q = 0.0       # Dividend yield
 n = 100       # Steps for binomial tree
@@ -28,7 +28,7 @@ S0, K, sigma, r, q, T = map(float, (S0, K, sigma, r, q, T))
 # Run Models
 # =======================
 print("Running Black-Scholes...")
-bs_results = black_scholes_main(S0, K, r, q, sigma, T)
+bs_results = black_scholes_main(S0, K, r, q, sigma, T, N_SIM=N_SIM)
 
 print("Running Binomial Tree...")
 bt_results = binomial_tree_main(S0, K, r, q, sigma, T, n)
@@ -41,15 +41,12 @@ lookback_results = lookback_option_main(S0, r, q, sigma, T, N_SIM, B, n)
 
 print("Running Rainbow Option...")
 rainbow_results = rainbow_option_main(
-    S0=[172, 173, 169, 165, 170],
+    S0=[100, 100],
     var_mat=[
-        [0.3, 0.25, 0.1, 0.2, 0.15],
-        [0.25, 0.4, 0.22, 0.25, 0.08],
-        [0.1, 0.22, 0.8, 0.29, 0.08],
-        [0.2, 0.25, 0.29, 0.6, 0.17],
-        [0.15, 0.08, 0.08, 0.17, 0.5]
+        [0.2, 0.2],
+        [0.2, 0.2]
     ],
-    K=140, r=r, T=T, N_SIM=5000, B=5, n_assets=5
+    K=100, r=r, q=q, T=T, N_SIM=N_SIM, B=5
 )
 
 # =======================
@@ -60,6 +57,9 @@ table.field_names = ["Model", "Call Price", "Put Price"]
 
 # Black-Scholes
 table.add_row(["Black-Scholes", bs_results["BS_Call"], bs_results["BS_Put"]])
+
+# European - MC
+table.add_row(["European (MC)", bs_results["MC_Call_CI"], bs_results["MC_Put_CI"]])
 
 # Binomial Tree - CRR European
 table.add_row(["Binomial Tree (CRR EU)", bt_results["CRR_Call_EU"], bt_results["CRR_Put_EU"]])

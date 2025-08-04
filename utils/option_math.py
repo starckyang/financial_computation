@@ -53,7 +53,7 @@ def cholesky_decomposition(matrix):
         for j in range(i + 1):
             sum_val = np.dot(A[i, :j], A[j, :j])
             if i == j:
-                A[i, j] = np.sqrt(matrix[i, i] - sum_val)
+                A[i, j] = np.sqrt(max(matrix[i, i] - sum_val, 0))
             else:
                 A[i, j] = (matrix[i, j] - sum_val) / A[j, j]
     return A

@@ -78,17 +78,19 @@ B = 5         # Monte Carlo batches
 ## 📊 Example Output
 ```mathematica
 === Option Pricing Results ===
-+----------------------+-------------+-----------+
-|        Model         | Call Price  | Put Price |
-+----------------------+-------------+-----------+
-|   Black-Scholes      |   10.4506   |  5.5735   |
-| Binomial Tree (CRR EU)|  10.4468   |  5.5782   |
-| Binomial Tree (CRR AM)|  10.4468   |  5.5782   |
-| Binomial Tree (Comb)  |  10.4468   |  5.5782   |
-| Asian Option (MC)     |   7.2314   |  2.9387   |
-| Lookback Option (MC)  |  12.8745   |  3.9452   |
-| Rainbow Option (MC)   |   8.5623   |    -      |
-+----------------------+-------------+-----------+
++------------------------+--------------------+--------------------+
+|         Model          |     Call Price     |     Put Price      |
++------------------------+--------------------+--------------------+
+|     Black-Scholes      |      19.8067       |      14.9296       |
+|     European (MC)      | (19.0504, 20.2957) | (14.7241, 15.2954) |
+| Binomial Tree (CRR EU) |      19.7634       |      14.8863       |
+| Binomial Tree (CRR AM) |      19.7634       |      15.4321       |
+|  Binomial Tree (Comb)  |      19.7634       |      14.8863       |
+|   Asian Option (MC)    | (-4.2832, 29.6134) |                    |
+|  Lookback Option (MC)  |       36.526       |      31.8767       |
+|  Rainbow Option (MC)   | (20.7441, 20.8971) |                    |
++------------------------+--------------------+--------------------+
+
 ```
 
 ## 📚 Academic & Practical Use Cases

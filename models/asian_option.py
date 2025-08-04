@@ -21,4 +21,5 @@ def asian_option_main(S0, K, r, q, sigma, T, n=100, N_SIM=5000, B=5):
         mc_results.append(np.mean(payoff) * np.exp(-r * T))
 
     ci = mc_confidence_interval(mc_results)
-    return {"Asian_Option_CI": ci}
+    return {"Asian_Option_CI": ci,
+            "Call": np.mean(mc_results)}
